@@ -5,11 +5,12 @@ import mongoose from 'mongoose';
 const bookSchema = new mongoose.Schema({
   title: { type: String, required: true },
   author: { type: String, required: true },
+  isbn: { type: String, required: true },
   publisher: { type: String, required: true },
-  numPages: { type: Number }
+  edition: { type: Number },
+  pages: { type: Number }
 });
 
-// se nao tivesse com a colletion criada, ele criaria para nos
 const books = mongoose.model('books', bookSchema);
 
 export default books;
