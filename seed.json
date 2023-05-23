@@ -1,0 +1,62 @@
+[
+  {
+      "_id": "646ce3cfe445622a0e4c5906",
+      "title": "Entendendo Algoritmos",
+      "author": "Aditya Bhargava",
+      "isbn": "978-8575225639",
+      "publisher": "Novatec",
+      "edition": 1,
+      "pages": 264,
+      "__v": 0
+  },
+  {
+      "_id": "646ce4a6e445622a0e4c5911",
+      "title": "Código Limpo: Habilidades práticas do Agile Software",
+      "author": "Robert C. Cecil",
+      "isbn": "978-8576082675",
+      "publisher": "Alta Book",
+      "edition": 1,
+      "pages": 425,
+      "__v": 0
+  },
+  {
+      "_id": "646ce4dee445622a0e4c5913",
+      "title": "O poder do hábito",
+      "author": "Charles Duhigg",
+      "isbn": "978-8539004119",
+      "publisher": "Objetiva",
+      "edition": 1,
+      "pages": 408,
+      "__v": 0
+  },
+  {
+      "_id": "646ce50ee445622a0e4c5915",
+      "title": "Hábitos atômicos",
+      "author": "James Clear",
+      "isbn": "978-8550807560",
+      "publisher": "Alta Life",
+      "edition": 1,
+      "pages": 320,
+      "__v": 0
+  },
+  {
+      "_id": "646ce544e445622a0e4c5917",
+      "title": "JavaScript: O Guia Definitivo",
+      "author": "David Flanagan",
+      "isbn": "978-8565837194",
+      "publisher": "Bookman",
+      "edition": 6,
+      "pages": 1080,
+      "__v": 0
+  },
+  {
+      "_id": "646ce572e445622a0e4c5919",
+      "title": "O Programador Pragmático",
+      "author": "Andrew Hunt, David Thomas",
+      "isbn": "978-8577807000",
+      "publisher": "Bookman",
+      "edition": 6,
+      "pages": 344,
+      "__v": 0
+  }
+]
