@@ -32,6 +32,29 @@ const findOneBookById = async(req, res) => {
   }
 }
 
+const findBooksByPublisher = async(req, res) => {
+  const { publisher } = req.query;
+
+  try {
+    const bookSearch = await books.find({ 
+      'publisher' : { $regex : new RegExp(publisher, 'i') } 
+    });
+
+    if (!bookSearch.length) {
+      return res.status(404).json({ 
+        message: `books by publisher ${publisher} not found.` 
+      });
+    }
+
+    return res.status(200).json(bookSearch);
+  } catch (error) {
+    res.status(500).json({ 
+      message: `${error.message} - 
+        failed to list books by publisher ${publisher}.` 
+    });
+  }
+}
+
 const createBook = async(req, res) => {
   // pode fazer: const newBook = new books(req.body);
   // para salvar com o .save() faz-se necessario avisar que
@@ -103,6 +126,7 @@ const deleteBook = async(req, res) => {
 export const bookController = {
   findAllBooks,
   findOneBookById,
+  findBooksByPublisher,
   createBook,
   updateBook,
   deleteBook
