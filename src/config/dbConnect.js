@@ -1,4 +1,5 @@
-// na pasta config e onde colocamos as configuracoes da nossa api, inclusive a conexao com o db
+// na pasta config é onde colocamos as configurações 
+// da nossa api, inclusive a conexão com o db
 
 import mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
