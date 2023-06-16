@@ -56,15 +56,37 @@ const findBooksByPublisher = async(req, res) => {
 }
 
 const createBook = async(req, res) => {
-  // pode fazer: const newBook = new books(req.body);
-  // para salvar com o .save() faz-se necessario avisar que
-  // e um novo documento: (await newBook.save()).isNew
+  // se fizer: const newBook = new books(req.body);
+  // para salvar com o .save() faz-se necessário avisar que
+  // é um novo documento: (await newBook.save()).isNew
   try {
     const newBook = req.body;
 
-    const createdBook = await books.create(newBook);
+    if (!newBook.title) {
+      return res.status(400).json({ 
+        message: `title field is required` 
+      });
+    }
 
-    // verificar se os campos obrigatorios foram preenchidos
+    if (!newBook.author) {
+      return res.status(400).json({ 
+        message: `author field is required` 
+      });
+    }
+
+    if (!newBook.isbn) {
+      return res.status(400).json({ 
+        message: `isbn field is required` 
+      });
+    }
+
+    if (!newBook.pubisher) {
+      return res.status(400).json({ 
+        message: `publisher field is required` 
+      });
+    }
+
+    const createdBook = await books.create(newBook);
     
     return res.status(200).json(createdBook);
   } catch (error) {
